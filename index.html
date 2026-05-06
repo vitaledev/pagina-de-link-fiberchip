@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber Chip | Links</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configuração de Cores Personalizadas no Tailwind para bater com a marca -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        netcare: {
+                            purple: '#FF006B',       /* Magenta primário */
+                            purpleLight: '#E6007E',  /* Magenta mais claro */
+                            cyan: '#00C4FF',         /* Destaque secundário */
+                            yellow: '#FFD700',       /* Atenção / destaque */
+                            green: '#FFD700',        /* Legacy alias para destaque amarelo */
+                            dark: '#0F142D',         /* Fundo escuro principal */
+                            surface: '#0A0D24',      /* Fundo secundário escuro */
+                            card: '#FFFFFF'          /* Fundo branco dos cards */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0F142D 0%, #1a0a3d 25%, #2d0a47 50%, #3d1a52 75%, #FF006B 100%);
+            background-attachment: fixed;
+            color: #F8FAFC;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Animações de entrada */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        /* Estilos Premium: Accordion e Animações */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        @keyframes shine {
+            100% { left: 125%; }
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex items-center justify-center p-4">
+
+    <!-- Elementos Visuais de Fundo (Pílulas Sólidas da Marca) - REMOVIDOS -->
+
+    <!-- Container Principal -->
+    <main class="w-full max-w-[420px] flex flex-col items-center z-10 py-8 relative">
+        
+        <!-- Botão de Partilha (Premium) -->
+        <button onclick="shareProfile()" class="absolute top-6 right-4 w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-400 hover:text-netcare-purple hover:border-netcare-purple/30 transition-all z-20" title="Partilhar">
+            <i class="ph ph-share-network text-xl"></i>
+        </button>
+
+        <!-- Header / Logo -->
+        <header class="flex flex-col items-center text-center mb-8 fade-in-up mt-4">
+            <div class="p-2 mb-2 relative group w-full max-w-[340px] mx-auto">
+                <div class="absolute inset-0 bg-netcare-purple/5 rounded-full scale-110 opacity-0 group-hover:opacity-100 transition-opacity blur-md"></div>
+                <img 
+                    src="https://files.catbox.moe/ttg8ue.png" 
+                    alt="Fiber Chip Logo" 
+                    class="h-32 w-full max-w-[340px] object-contain relative z-10 mx-auto"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/320x120/ffffff/FF006B?text=Fiber+Chip';"
+                >
+            </div>
+        </header>
+
+        <!-- Redes Sociais (Ícones Menores) -->
+        <div class="grid grid-cols-4 gap-4 mb-8 fade-in-up delay-1 place-items-center w-full max-w-[280px] mx-auto">
+            <a href="https://www.instagram.com/fiberchipoficial/" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-netcare-purple hover:text-white hover:bg-gradient-to-tr hover:from-pink-500 hover:to-orange-400 hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-instagram-logo text-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/fiberchip-undefined-395591407" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-netcare-purple hover:text-white hover:bg-[#0077b5] hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-linkedin-logo text-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61589236296093" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-netcare-purple hover:text-white hover:bg-[#1877F2] hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-facebook-logo text-2xl"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCxueIUiDQwqwWyjNfTehRkA/" target="_blank" class="w-12 h-12 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-netcare-purple hover:text-white hover:bg-[#FF0000] hover:border-transparent hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <i class="ph ph-youtube-logo text-2xl"></i>
+            </a>
+        </div>
+
+        <!-- Links Principais -->
+        <div class="w-full grid grid-cols-1 gap-4 px-2">
+            
+            <!-- 1. Website -->
+            <a href="https://fiberchip.com.br/" target="_blank" 
+               class="fade-in-up delay-2 group flex items-center justify-between p-4 bg-white border border-slate-200 shadow-sm rounded-2xl hover:border-netcare-purple/30 hover:shadow-md transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple group-hover:bg-netcare-purple group-hover:text-white transition-colors">
+                        <i class="ph ph-globe text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left">Acesse nosso Site</span>
+                </div>
+                <i class="ph-bold ph-caret-right text-slate-300 group-hover:text-netcare-purple transition-all"></i>
+            </a>
+
+            <!-- 2. Menu Expansível: Sobre Nós (Premium) -->
+            <div class="fade-in-up delay-3 w-full border border-slate-200 bg-white rounded-2xl overflow-hidden shadow-sm hover:border-netcare-purple/30 transition-colors" id="aboutAccordion">
+                <button onclick="toggleAccordion('aboutAccordion')" class="w-full flex items-center justify-between p-4 group">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple transition-colors">
+                            <i class="ph ph-info text-2xl"></i>
+                        </div>
+                        <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left">Sobre Nós</span>
+                    </div>
+                    <i class="ph-bold ph-caret-down text-slate-400 accordion-icon group-hover:text-netcare-purple transition-transform"></i>
+                </button>
+                <div class="accordion-content bg-slate-50 border-t border-slate-100">
+                    <div class="p-4 space-y-3 text-slate-700 text-sm leading-relaxed">
+                        <p class="font-bold text-netcare-purple">O melhor atendimento em telefonia móvel do Brasil.</p>
+                        
+                        <p>A Fiber Chip revoluciona o atendimento ao telefonia móvel. Diga adeus às surpresas de fatura, confusão com créditos e planos complicados.</p>
+                        
+                        <div class="space-y-2 mt-3 pt-3 border-t border-slate-200">
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-headphones text-lg text-netcare-purple shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">Atendimento Humanizado</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-lightning text-lg text-netcare-purple shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">Resposta Rápida</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-eye text-lg text-netcare-purple shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">Transparência Total</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-check-circle text-lg text-netcare-purple shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">Sem Burocracia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-wifi-high text-lg text-netcare-purple shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">Cobertura Nacional 4G/5G</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-lock-open text-lg text-netcare-purple shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">Sem Fidelidade</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="https://fiberchip.com.br/#services" target="_blank" class="block mt-3 text-center p-2.5 bg-netcare-purple text-white rounded-lg font-bold hover:bg-netcare-purpleLight transition-colors text-xs">
+                            Conheça Nossas Soluções
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Trabalhe Conosco (Aba / Modal) -->
+            <button onclick="openModal()" 
+               class="fade-in-up delay-4 group flex items-center justify-between p-4 bg-white border border-slate-200 shadow-sm rounded-2xl hover:border-netcare-purple/30 hover:shadow-md transition-all duration-300 w-full text-left">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple group-hover:bg-netcare-purple group-hover:text-white transition-colors">
+                        <i class="ph ph-briefcase text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left">Trabalhe Conosco</span>
+                </div>
+                <i class="ph-bold ph-caret-right text-slate-300 group-hover:text-netcare-purple transition-all"></i>
+            </button>
+
+            <!-- 4. WhatsApp (Fale com um Especialista) -->
+            <a href="https://api.whatsapp.com/send?phone=554432002103&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" 
+               class="fade-in-up delay-5 group relative overflow-hidden flex items-center justify-between p-4 bg-netcare-purple text-white rounded-2xl hover:bg-netcare-purpleLight hover:shadow-[0_8px_25px_rgba(255,0,107,0.25)] hover:-translate-y-0.5 transition-all duration-300">
+                <!-- Efeito de brilho animado -->
+                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-25 group-hover:animate-[shine_1.5s]"></div>
+                
+                <div class="flex items-center gap-4 relative z-10">
+                    <div class="flex items-center justify-center w-12 h-12 shrink-0 bg-white/10 rounded-full">
+                        <i class="ph-fill ph-whatsapp-logo text-2xl text-white"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg tracking-wide text-left">Fale com um Especialista</span>
+                </div>
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
+                    <i class="ph-bold ph-caret-right text-white"></i>
+                </div>
+            </a>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center fade-in-up delay-5">
+            <p class="text-xs text-slate-400 font-medium">
+                © 2026 Fiber Chip. Todos os direitos reservados.
+            </p>
+        </footer>
+    </main>
+
+    <!-- MODAL TRABALHE CONOSCO -->
+    <div id="jobModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-netcare-dark/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        
+        <!-- Conteúdo do Modal (Light Theme para combinar com a nova identidade) -->
+        <div id="jobModalContent" class="bg-white border border-slate-100 p-6 sm:p-8 rounded-[2rem] w-full max-w-md transform scale-95 transition-transform duration-300 relative shadow-2xl overflow-y-auto max-h-[90vh]">
+            
+            <!-- Botão Fechar -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:text-netcare-purple hover:bg-netcare-purple/10 transition-colors">
+                <i class="ph-bold ph-x text-lg"></i>
+            </button>
+
+            <!-- Cabeçalho do Form -->
+            <div class="mb-6 pr-8">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-netcare-purpleLight to-netcare-purple flex items-center justify-center mb-4 shadow-lg shadow-netcare-purple/20">
+                    <i class="ph ph-rocket-launch text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-netcare-purple tracking-tight mb-2">Faça parte do time</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Estamos sempre em busca de novos talentos para revolucionar a telefonia móvel conosco. Envie suas informações.
+                </p>
+            </div>
+
+            <!-- Formulário -->
+            <form id="jobForm" onsubmit="submitJobForm(event)" class="grid grid-cols-1 gap-4">
+                
+                <div class="space-y-1">
+                    <label class="text-xs text-slate-500 font-bold uppercase tracking-wider pl-1" for="fullName">Nome Completo</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Ex: João Silva" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-slate-800 text-sm focus:outline-none focus:border-netcare-purple focus:ring-1 focus:ring-netcare-purple transition-all placeholder:text-slate-400">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-xs text-slate-500 font-bold uppercase tracking-wider pl-1" for="email">E-mail Profissional</label>
+                    <input id="email" name="email" type="email" placeholder="joao@exemplo.com" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-slate-800 text-sm focus:outline-none focus:border-netcare-purple focus:ring-1 focus:ring-netcare-purple transition-all placeholder:text-slate-400">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-xs text-slate-500 font-bold uppercase tracking-wider pl-1" for="linkedin">Perfil do LinkedIn (Opcional)</label>
+                    <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/..."
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-slate-800 text-sm focus:outline-none focus:border-netcare-purple focus:ring-1 focus:ring-netcare-purple transition-all placeholder:text-slate-400">
+                </div>
+                
+                <div class="space-y-1">
+                    <label class="text-xs text-slate-500 font-bold uppercase tracking-wider pl-1" for="interest">Área de Interesse</label>
+                    <select id="interest" name="interest" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-slate-800 text-sm focus:outline-none focus:border-netcare-purple focus:ring-1 focus:ring-netcare-purple transition-all appearance-none">
+                        <option value="tecnica">Suporte Técnico / Redes</option>
+                        <option value="comercial">Comercial / Vendas</option>
+                        <option value="atendimento">Atendimento ao Cliente</option>
+                        <option value="admin">Administrativo / Financeiro</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn"
+                    class="group relative w-full overflow-hidden rounded-xl bg-netcare-purple p-4 mt-2 font-bold text-white transition-all hover:bg-netcare-dark hover:shadow-lg hover:shadow-netcare-purple/30 active:scale-95">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        <span>Enviar Candidatura</span>
+                        <i class="ph-bold ph-paper-plane-right group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </span>
+                </button>
+            </form>
+
+            <!-- Mensagem de Sucesso (Oculta por padrão) -->
+            <div id="successMessage" class="hidden flex-col items-center justify-center py-8 text-center">
+                <div class="w-16 h-16 bg-netcare-yellow/20 rounded-full flex items-center justify-center mb-4">
+                    <i class="ph-bold ph-check text-3xl text-netcare-yellow"></i>
+                </div>
+                <h4 class="text-xl font-extrabold text-netcare-purple mb-2">Currículo Enviado!</h4>
+                <p class="text-sm text-slate-500 mb-6">Agradecemos seu interesse. Em breve nossa equipe de RH analisará suas informações.</p>
+                <button onclick="closeModal()" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold transition-colors">
+                    Fechar Janela
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts para controle do Modal e Formulário -->
+    <script>
+        const modal = document.getElementById('jobModal');
+        const modalContent = document.getElementById('jobModalContent');
+        const jobForm = document.getElementById('jobForm');
+        const successMessage = document.getElementById('successMessage');
+
+        function openModal() {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+            // Resetar form caso reabra
+            jobForm.reset();
+            jobForm.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            successMessage.classList.remove('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+        }
+
+        // Fechar modal clicando fora dele
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function submitJobForm(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const linkedin = document.getElementById('linkedin').value.trim();
+            const interest = document.getElementById('interest').value;
+
+            const interestLabels = {
+                tecnica: 'Suporte Técnico / Redes',
+                comercial: 'Comercial / Vendas',
+                atendimento: 'Atendimento ao Cliente',
+                admin: 'Administrativo / Financeiro',
+                outros: 'Outros'
+            };
+
+            const messageText = `Olá, quero enviar meu curriculo para Fiber Chip visando futuras oportunidades.%0A%0A` +
+                `Nome: ${encodeURIComponent(fullName)}%0A` +
+                `E-mail: ${encodeURIComponent(email)}%0A` +
+                `LinkedIn: ${encodeURIComponent(linkedin || 'Não informado')}%0A` +
+                `Área de Interesse: ${encodeURIComponent(interestLabels[interest] || interest)}`;
+
+            const whatsappPhone = '5544935052835';
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${messageText}`;
+
+            // Abrir WhatsApp com a mensagem preenchida
+            window.open(whatsappUrl, '_blank');
+
+            // Feedback visual no modal
+            btn.innerHTML = `<i class="ph ph-spinner animate-spin text-xl"></i> Enviando...`;
+            btn.disabled = true;
+            btn.classList.add('opacity-70');
+
+            setTimeout(() => {
+                jobForm.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('flex');
+                
+                // Restaurar botão para futuro uso
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-70');
+            }, 1000);
+        }
+
+        // --- Funcionalidades Premium ---
+
+        // 1. Partilha Nativa (Web Share API)
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Fiber Chip',
+                    text: 'Conheça a melhor telefonia móvel com atendimento de qualidade!',
+                    url: window.location.href,
+                })
+                .catch((error) => console.log('Erro ao partilhar', error));
+            } else {
+                // Fallback: Copiar link
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                // Pode usar uma notificação visual aqui no lugar do alert se preferir
+                alert('Link copiado para a área de transferência!');
+            }
+        }
+
+        // 2. Controlar o Accordion (Menu Expansível)
+        function toggleAccordion(id) {
+            const accordion = document.getElementById(id);
+            const content = accordion.querySelector('.accordion-content');
+            
+            if (accordion.classList.contains('accordion-active')) {
+                accordion.classList.remove('accordion-active');
+                content.style.maxHeight = null;
+            } else {
+                // Fechar outros accordions abertos
+                document.querySelectorAll('.accordion-active').forEach(acc => {
+                    acc.classList.remove('accordion-active');
+                    acc.querySelector('.accordion-content').style.maxHeight = null;
+                });
+                
+                accordion.classList.add('accordion-active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>
