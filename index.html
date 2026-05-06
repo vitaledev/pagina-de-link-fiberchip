@@ -21,8 +21,8 @@
                 extend: {
                     colors: {
                         netcare: {
-                            purple: '#FF006B',       /* Magenta primário */
-                            purpleLight: '#E6007E',  /* Magenta mais claro */
+                            purple: '#ff00aa',       /* Magenta primário */
+                            purpleLight: '#ff1ab8',  /* Magenta mais claro */
                             cyan: '#00C4FF',         /* Destaque secundário */
                             yellow: '#FFD700',       /* Atenção / destaque */
                             green: '#FFD700',        /* Legacy alias para destaque amarelo */
@@ -39,7 +39,7 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #0F142D 0%, #1a0a3d 25%, #2d0a47 50%, #3d1a52 75%, #FF006B 100%);
+            background: linear-gradient(135deg, #0F142D 0%, #1a0a3d 25%, #2d0a47 50%, #3d1a52 75%, #ff00aa 100%);
             background-attachment: fixed;
             color: #F8FAFC;
             overflow-x: hidden;
@@ -109,7 +109,7 @@
                     src="https://files.catbox.moe/ttg8ue.png" 
                     alt="Fiber Chip Logo" 
                     class="h-32 w-full max-w-[340px] object-contain relative z-10 mx-auto"
-                    onerror="this.onerror=null; this.src='https://via.placeholder.com/320x120/ffffff/FF006B?text=Fiber+Chip';"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/320x120/ffffff/ff00aa?text=Fiber+Chip';"
                 >
             </div>
         </header>
@@ -131,69 +131,69 @@
         </div>
 
         <!-- Links Principais -->
-        <div class="w-full grid grid-cols-1 gap-4 px-2">
+        <div class="w-full grid grid-cols-1 gap-2 sm:gap-4 px-2">
             
             <!-- 1. Website -->
             <a href="https://fiberchip.com.br/" target="_blank" 
-               class="fade-in-up delay-2 group flex items-center justify-between p-4 bg-white border border-slate-200 shadow-sm rounded-2xl hover:border-netcare-purple/30 hover:shadow-md transition-all duration-300">
+               class="fade-in-up delay-2 group flex items-center justify-between sm:p-4 p-3 bg-white border border-slate-200 shadow-sm rounded-2xl hover:border-netcare-purple/30 hover:shadow-md transition-all duration-300">
                 <div class="flex items-center gap-4">
-                    <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple group-hover:bg-netcare-purple group-hover:text-white transition-colors">
-                        <i class="ph ph-globe text-2xl"></i>
+                    <div class="flex items-center justify-center sm:w-12 sm:h-12 w-10 h-10 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple group-hover:bg-netcare-purple group-hover:text-white transition-colors">
+                        <i class="ph ph-globe sm:text-2xl text-xl"></i>
                     </div>
-                    <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left">Acesse nosso Site</span>
+                    <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left sm:text-base text-sm">Acesse nosso Site</span>
                 </div>
                 <i class="ph-bold ph-caret-right text-slate-300 group-hover:text-netcare-purple transition-all"></i>
             </a>
 
             <!-- 2. Menu Expansível: Sobre Nós (Premium) -->
             <div class="fade-in-up delay-3 w-full border border-slate-200 bg-white rounded-2xl overflow-hidden shadow-sm hover:border-netcare-purple/30 transition-colors" id="aboutAccordion">
-                <button onclick="toggleAccordion('aboutAccordion')" class="w-full flex items-center justify-between p-4 group">
+                <button onclick="toggleAccordion('aboutAccordion')" class="w-full flex items-center justify-between sm:p-4 p-3 group">
                     <div class="flex items-center gap-4">
                         <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple transition-colors">
                             <i class="ph ph-info text-2xl"></i>
                         </div>
-                        <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left">Sobre Nós</span>
+                        <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left sm:text-base text-sm">Sobre Nós</span>
                     </div>
                     <i class="ph-bold ph-caret-down text-slate-400 accordion-icon group-hover:text-netcare-purple transition-transform"></i>
                 </button>
                 <div class="accordion-content bg-slate-50 border-t border-slate-100">
-                    <div class="p-4 space-y-3 text-slate-700 text-sm leading-relaxed">
+                    <div class="sm:p-4 p-3 space-y-3 text-slate-700 text-sm leading-relaxed">
                         <p class="font-bold text-netcare-purple">O melhor atendimento em telefonia móvel do Brasil.</p>
                         
                         <p>A Fiber Chip revoluciona o atendimento ao telefonia móvel. Diga adeus às surpresas de fatura, confusão com créditos e planos complicados.</p>
                         
                         <div class="space-y-2 mt-3 pt-3 border-t border-slate-200">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center sm:gap-2 gap-1.5">
                                 <i class="ph-fill ph-headphones text-lg text-netcare-purple shrink-0"></i>
                                 <div>
                                     <p class="font-bold text-xs text-slate-800">Atendimento Humanizado</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center sm:gap-2 gap-1.5">
                                 <i class="ph-fill ph-lightning text-lg text-netcare-purple shrink-0"></i>
                                 <div>
                                     <p class="font-bold text-xs text-slate-800">Resposta Rápida</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center sm:gap-2 gap-1.5">
                                 <i class="ph-fill ph-eye text-lg text-netcare-purple shrink-0"></i>
                                 <div>
                                     <p class="font-bold text-xs text-slate-800">Transparência Total</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center sm:gap-2 gap-1.5">
                                 <i class="ph-fill ph-check-circle text-lg text-netcare-purple shrink-0"></i>
                                 <div>
                                     <p class="font-bold text-xs text-slate-800">Sem Burocracia</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center sm:gap-2 gap-1.5">
                                 <i class="ph-fill ph-wifi-high text-lg text-netcare-purple shrink-0"></i>
                                 <div>
                                     <p class="font-bold text-xs text-slate-800">Cobertura Nacional 4G/5G</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center sm:gap-2 gap-1.5">
                                 <i class="ph-fill ph-lock-open text-lg text-netcare-purple shrink-0"></i>
                                 <div>
                                     <p class="font-bold text-xs text-slate-800">Sem Fidelidade</p>
@@ -210,27 +210,27 @@
 
             <!-- 3. Trabalhe Conosco (Aba / Modal) -->
             <button onclick="openModal()" 
-               class="fade-in-up delay-4 group flex items-center justify-between p-4 bg-white border border-slate-200 shadow-sm rounded-2xl hover:border-netcare-purple/30 hover:shadow-md transition-all duration-300 w-full text-left">
+               class="fade-in-up delay-4 group flex items-center justify-between sm:p-4 p-3 bg-white border border-slate-200 shadow-sm rounded-2xl hover:border-netcare-purple/30 hover:shadow-md transition-all duration-300 w-full text-left">
                 <div class="flex items-center gap-4">
-                    <div class="flex items-center justify-center w-12 h-12 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple group-hover:bg-netcare-purple group-hover:text-white transition-colors">
-                        <i class="ph ph-briefcase text-2xl"></i>
+                    <div class="flex items-center justify-center sm:w-12 sm:h-12 w-10 h-10 shrink-0 rounded-full bg-netcare-purple/5 text-netcare-purple group-hover:bg-netcare-purple group-hover:text-white transition-colors">
+                        <i class="ph ph-briefcase sm:text-2xl text-xl"></i>
                     </div>
-                    <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left">Trabalhe Conosco</span>
+                    <span class="font-bold text-slate-700 group-hover:text-netcare-purple tracking-wide text-left sm:text-base text-sm">Trabalhe Conosco</span>
                 </div>
                 <i class="ph-bold ph-caret-right text-slate-300 group-hover:text-netcare-purple transition-all"></i>
             </button>
 
             <!-- 4. WhatsApp (Fale com um Especialista) -->
             <a href="https://api.whatsapp.com/send?phone=554432002103&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" 
-               class="fade-in-up delay-5 group relative overflow-hidden flex items-center justify-between p-4 bg-netcare-purple text-white rounded-2xl hover:bg-netcare-purpleLight hover:shadow-[0_8px_25px_rgba(255,0,107,0.25)] hover:-translate-y-0.5 transition-all duration-300">
+               class="fade-in-up delay-5 group relative overflow-hidden flex items-center justify-between sm:p-4 p-3 bg-netcare-purple text-white rounded-2xl hover:bg-netcare-purpleLight hover:shadow-[0_8px_25px_rgba(255,0,170,0.25)] hover:-translate-y-0.5 transition-all duration-300">
                 <!-- Efeito de brilho animado -->
                 <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-25 group-hover:animate-[shine_1.5s]"></div>
                 
                 <div class="flex items-center gap-4 relative z-10">
-                    <div class="flex items-center justify-center w-12 h-12 shrink-0 bg-white/10 rounded-full">
-                        <i class="ph-fill ph-whatsapp-logo text-2xl text-white"></i>
+                    <div class="flex items-center justify-center sm:w-12 sm:h-12 w-10 h-10 shrink-0 bg-white/10 rounded-full">
+                        <i class="ph-fill ph-whatsapp-logo sm:text-2xl text-xl text-white"></i>
                     </div>
-                    <span class="font-bold text-white text-lg tracking-wide text-left">Fale com um Especialista</span>
+                    <span class="font-bold text-white sm:text-lg text-base tracking-wide text-left">Fale com um Especialista</span>
                 </div>
                 <div class="relative z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                     <i class="ph-bold ph-caret-right text-white"></i>
